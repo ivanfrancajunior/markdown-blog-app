@@ -5,7 +5,7 @@ import "prismjs/themes/prism.css";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-python";
 import "prismjs/components/prism-bash";
-import "prismjs/themes/prism-tomorrow.min.css";
+import "prismjs/themes/prism-okaidia.min.css";
 
 interface Props {
   children: React.ReactNode;

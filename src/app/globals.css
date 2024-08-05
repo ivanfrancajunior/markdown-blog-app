@@ -30,14 +30,9 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-orange-400;
+  @apply text-orange-400 text-xl;
 }
 
 pre {
-  @apply rounded overflow-x-auto shadow-none;
+  @apply rounded overflow-x-auto shadow-none max-w-6xl;
 }
-
-/* code {
-  @apply text-pink-600 font-medium;
-}
-*/

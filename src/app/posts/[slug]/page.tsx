@@ -22,7 +22,6 @@ export const generateStaticParams = async () => {
 
 export async function generateMetadata({ params, searchParams }: any) {
   const post = getPostContent(params.slug);
-  const id = params?.slug ? "." + params.slug : " ";
   return {
     title: post.data.title,
     description: post.data.subtitle,
@@ -33,7 +32,7 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   return (
-    <div className='flex gap-6 flex-col items-start justify-center'>
+    <div className='flex gap-6 flex-col items-center justify-center max-w-6xl flex-wrap mx-auto'>
       <h2 className='text-[#4b855d] text-3xl'>{post.data.title}</h2>
 
       <h3 className='text-orange-400 text-2xl italic'>{post.data.subtitle}</h3>
@@ -41,7 +40,6 @@ const PostPage = (props: any) => {
       <PrismWrapper>
         <Markdown options={{ forceBlock: true }}>{post.content}</Markdown>
       </PrismWrapper>
-    
     </div>
   );
 };
