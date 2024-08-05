@@ -5,6 +5,8 @@ subtitle: "Resumo sobe uso de Git e Github"
 slug: "git_github"
 ---
 
+<br/>
+
 ## GIT
 
 - O Git é um software de controle de versão, nos permitindo ter versões de um arquivos e manipular as alterações sofridas no mesmo ao longo do desenvolvimento.
@@ -227,9 +229,12 @@ git reset --hard origin/main
 
 Para ignorar arquivos de um repositório remoto, cria-se um arquivo `.gitignore`, nele é passado o nome ou os nomes dos arquivos que não se quer versionar.
 
+<br/>
+
 ## TRABALHANDO COM BRANCHES
 
 As branches são uma forma que o Git disponibiliza para separar o projeto em versões, isso possibilita que sem que seja alterado o repositório padrão, um projeto seja gerenciado por mais de uma pessoa adicionando ou removendo arquivos e código a um projeto, dando facilidade na manutenção ou criação de novas features sem que o repositório padrão seja inutilizado n ocaso de algum erro ou alguma alteração não esperada.
+
 <br/>
 
 ### VISUALIANDO BRANCHES EXISTESTES:
@@ -376,7 +381,6 @@ index 3e4150b..e23c5bc 100644
 +function sayHi(name) {
 +  return `Oi, ${nome}`;
  }
-
 ```
 
 <br/>
@@ -392,11 +396,14 @@ git diff
 git diff HEAD: <nome do arquivo>
 ```
 
+<br/>
+
 ## TRABALAHNDO COM TAGS
 
 As tags no Git são referências específicas a um ponto na história do seu repositório.
 
 Elas são usadas para marcar versões específicas do seu código, facilitando a identificação e referência a pontos significativos de desenvolvimento, como releases ou versões estáveis.
+
 <br/>
 
 ### CRIANDO UMA TAG
@@ -499,43 +506,55 @@ git push origin <nome da tag>
 git push origin --tags
 ```
 
+<br/>
+
+<br/>
+
 ## GITHUB PROFISSIONAL
 
 <br/>
 
 ### ISSUES
 
-- As issues são utilizadas para rastrear tarefas, melhorias, bugs e discussões em um projeto. Elas oferecem um meio eficiente de colaboração e comunicação entre membros da equipe ou colaboradores externos.
-  <br/>
+- As **issues** são utilizadas para rastrear tarefas, melhorias, bugs e discussões em um projeto. Elas oferecem um meio eficiente de colaboração e comunicação entre membros da equipe ou colaboradores externos.
+
+<br/>
 
 ### ABRINDO ISSUE:
 
-```mardonw
+<br/>
+<br/>
+
+```markdown
 Acesse o Repositório:
 
 - Vá para a página do repositório no GitHub onde você deseja abrir a issue.
 
 1. **Abra a Guia "Issues":**
 
-    - Na parte superior do repositório, clique na guia "Issues".
+   - Na parte superior do repositório, clique na guia "Issues".
+
 2. **Crie uma Nova Issue:**
 
-    - Clique no botão "New Issue".
+   - Clique no botão "New Issue".
+
 3. **Preencha os Detalhes:**
 
-    - Dê um título descritivo à issue.
-    - Adicione um comentário detalhando o problema, a tarefa ou a discussão.
-    - Utilize labels para categorizar a issue (por exemplo, "bug", "enhancement", "documentation", etc.).
-    - Atribua a issue a um responsável, se aplicável.
+   - Dê um título descritivo à issue.
+   - Adicione um comentário detalhando o problema, a tarefa ou a discussão.
+   - Utilize labels para categorizar a issue (por exemplo, "bug", "enhancement", "documentation", etc.).
+   - Atribua a issue a um responsável, se aplicável.
+
 4. **Crie a Issue:**
 
-    - Clique no botão "Submit new issue" para criar a issue.
+   - Clique no botão "Submit new issue" para criar a issue.
 ```
 
 <br/>
 
 ### FECHANDO ISSUE:
 
+```markdown
 **Fechar Manualmente:**
 
 - Se a issue foi resolvida ou concluída, você pode fechá-la manualmente.
@@ -549,8 +568,9 @@ Acesse o Repositório:
 - Pode-se associar commits aos números de issue para fechá-las automaticamente.
 
 - Inclua palavras-chave como "**fixes**", "**closes**" ou "**resolves**" seguidas do número da issue no seu commit.
-  <br/>
+```
 
+<br/>
 <br/>
 
 ```sh
@@ -668,4 +688,3 @@ O **Gist no GitHub** é uma ferramenta versátil e conveniente que oferece uma m
 <br/>
 <br/>
 
-## GITHUB PAGES

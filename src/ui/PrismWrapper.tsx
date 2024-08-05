@@ -5,7 +5,7 @@ import "prismjs/themes/prism.css";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-python";
 import "prismjs/components/prism-bash";
-import "prismjs/themes/prism-okaidia.min.css";
+import "prism-themes/themes/prism-dracula.css";
 
 interface Props {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ const PrismWrapper = ({ children }: Props) => {
   React.useEffect(() => {
     Prism.highlightAll();
   }, []);
-  return <div >{children}</div>;
+  return <div>{children}</div>;
 };
 
 export default PrismWrapper;
