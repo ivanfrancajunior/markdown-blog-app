@@ -101,21 +101,25 @@ git commit -m 'adicionado arquivo teste.txt'
 
   git push -u origin main # enviado arquivos ao repositório na branch escolida
 ```
+<br>
 
 **Complementando os comandos :**
 
-- `git remote add origin https://github.com/usuario/curso_git_github.git`: Este comando adiciona um novo repositório remoto chamado `origin`. O `origin` geralmente aponta para o repositório no GitHub. O URL especificado é o caminho para o repositório remoto.
+```bash
+git remote add origin <link do repositório>
 
-- `git push -u origin main`: Este comando envia (push) as alterações do repositório local para o repositório remoto (`origin`).
+# Este comando adiciona um novo repositório remoto chamado origin.
 
-- O `-u` é utilizado para configurar a branch local (`main`) para rastrear a branch remota correspondente. Isso significa que, futuramente, você pode simplesmente usar `git push` e `git pull` sem especificar a branch e o repositório remoto.
+# O origin geralmente aponta para o repositório no GitHub. O URL especificado é o caminho para o repositório remoto.
 
-<br/>
+git push -u origin main
+# Este comando envia (push) as alterações do repositório local para o repositório remoto (`origin`).
 
-```sh
-git push
+# O -u é utilizado para configurar a branch local (`main`) para rastrear a branch remota correspondente.
+
+#Isso significa que, futuramente, você pode simplesmente usar `git push` e `git pull` sem especificar a branch e o repositório remoto.
+
 ```
-
 <br/>
 
 ### RESGATANDO ALTERAÇÕES DE UM REPOSITÓRIO
@@ -173,7 +177,7 @@ git reflog
 
 <br/>
 
-### DESFAZENDO ALTERAÇÕES NÃO COMMITADAS
+### DESFAZENDO ALTERAÇÕES NÃO COMITADAS
 
 - Caso você tenha feito alterações em um arquivo e deseja desfazê-las, você pode usar o comando `git checkout`, Esse comando descarta as alterações não confirmadas no arquivo especificado, revertendo-o para o estado do último commit.
 
@@ -193,7 +197,7 @@ git checkout -- .
 
 <br/>
 
-### DESFAZENDO ALTERAÇÕES COMMITADAS
+### DESFAZENDO ALTERAÇÕES COMITADAS
 
 Pode ocorrer também das alterações já estejam versionadas, logo o `git checkout` não funcionará, para estes casos usamos o `git revert`, ele desfaz as alterações de um commit especificado, adicionando uma mensagem, onde deve ser descrita a 'reversão' dos arquivos.
 
