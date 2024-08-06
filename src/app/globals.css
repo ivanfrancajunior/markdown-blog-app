@@ -36,3 +36,13 @@ h6 {
 pre {
   @apply rounded overflow-x-auto shadow-none max-w-6xl;
 }
+
+.tag {
+  @apply flex gap-2;
+
+}
+
+.tag span {
+  @apply rounded-full px-3 py-0.5 font-bold bg-cyan-900 mt-2 capitalize;
+
+}

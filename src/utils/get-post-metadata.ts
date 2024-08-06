@@ -1,7 +1,7 @@
 import fs from 'fs'
 import metter from 'gray-matter'
 
-export function getPostMetadata(basePath: string){
+export function getPostMetadata (basePath: string): Post[] {
     const directory = basePath+ '/';
 
     const files = fs.readdirSync(directory);
@@ -18,8 +18,17 @@ export function getPostMetadata(basePath: string){
             date: result.data.date,
             subtitle: result.data.subtitle,
             slug: filename.replace('.md', ''),
+            tags:result.data.tags
         }
     } )
 
     return post;
+}
+
+export interface Post {
+    title: string
+    date: Date
+    subtitle: string
+    slug: string
+    tags: string[]
 }

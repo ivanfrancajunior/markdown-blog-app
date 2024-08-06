@@ -3,6 +3,7 @@ title: "Resumo de Docker"
 date: 2024-08-05
 subtitle: "Anotações e resumo sobe uso basico de Docker para desenvolvedores"
 slug: "docker_for_devs"
+tags: ['tool', 'backend']
 ---
 
 ## CONTAINERS
@@ -53,32 +54,38 @@ docker ps # Exibe a lista de containers em execução
 
 docker ps -a # Exibe a lista de containers em execução e parados
 
-docker start <container id> # Inicia um container com seu id (acho q pelas inicias ele tbm identifica)
+docker start container id # Inicia um container com seu id (acho q pelas inicias ele tbm identifica)
 
-docker run < container name > # cria  e executa um novo container a partir de uma imagem
+docker run container_name  # cria  e executa um novo container a partir de uma imagem
 
-docker pull < image name > # baixa uma imagem do docker hub em sua ultima versão
+docker pull image_name  # baixa uma imagem do docker hub em sua ultima versão
 
-docker pull < image name > [version] #baixa uma imagem do docker hub a partir da versão fornecida
+docker pull image_name  [version] #baixa uma imagem do docker hub a partir da versão fornecida
 
-docker image rm < container id > # remove o container com id selecionado
+docker image rm container id  # remove o container com id selecionado
 
-docker image rm < container id > -f # remove o container com id selecionado recursivamente ( para o container, remove a imagem )
+docker image rm container id  -f # remove o container com id selecionado recursivamente ( para o container, remove a imagem )
 
-docker run -d < container id > # roda um container em background
+docker run -d container_id  # roda um container em background
 
-docker run < container id > -p < porta > # expõe uma porta para q possamos ter acesso ao container da nossa máquina
+docker run container_id  -p porta  # expõe uma porta para q possamos ter acesso ao container da nossa máquina
 # sintaxe:  docker run -p [porta desejada no sistema ]: [porta do container ] [nome do container]
 
-# exemplo:  docker run -d -p 8080:80 nginx:1.19.4-alpine
+# exemplo:
+docker run -d -p 8080:80 nginx:1.19.4-alpine
 
-docker run --name < container alias > #cria um container com um alias
+docker run --name container_alias  #cria um container com um alias
 
-docker exec -it < alias do container > < recurso > # interage com o container abrindo o shell
+# exemplo:
+docker run  254f4cabdfb9 --name meu_container
 
- # exemplo: [docker exec -it <- base comand] [id: 254f4cabdfb9] [sh <- shell do container]
+docker exec -it alias_do_container recurso  # interage com o container abrindo o shell
+
+# exemplo:
+docker exec -it meu_container sh
 
 #obs: Para encerrar a interação pressionar CTRL + D
+
 ```
 
 <br>
@@ -106,7 +113,7 @@ A ideia é bindar uma pasta padrão no container com a tag -v e persistir ela us
 
 ```bash
 # Usando o comando
-docker inspect < container id >
+docker inspect  container_id
 # é possível verificar os arquivos, ao usar procurar por 'Mounts'
 ```
 

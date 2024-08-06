@@ -3,6 +3,7 @@ title: "Resumo Git e GitHub"
 date: 2024-08-05
 subtitle: "Resumo sobe uso de Git e Github"
 slug: "git_github"
+tags: ['tool']
 ---
 
 <br/>
