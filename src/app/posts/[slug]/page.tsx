@@ -32,14 +32,24 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   return (
-    <div className='flex gap-6 flex-col items-center justify-center max-w-6xl flex-wrap mx-auto'>
+    <div className='flex flex-col items-start justify-center gap-8 mx-auto'>
       <h2 className='text-[#4b855d] text-3xl'>{post.data.title}</h2>
 
-      <h3 className='text-orange-400 text-2xl italic'>{post.data.subtitle}</h3>
+      <h3 className='text-white font-thin text-2xl italic'>{post.data.subtitle}</h3>
 
-      <PrismWrapper>
-        <Markdown options={{ forceBlock: true }}>{post.content}</Markdown>
-      </PrismWrapper>
+      <hr  className="bg-white h-[1px] w-full"/>
+      <article>
+        <PrismWrapper>
+          <Markdown
+            className='prism'
+            options={{
+              forceBlock: true,
+            }}
+          >
+            {post.content}
+          </Markdown>
+        </PrismWrapper>
+      </article>
     </div>
   );
 };
